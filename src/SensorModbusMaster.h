@@ -176,7 +176,13 @@ class modbusMaster {
      */
     bool begin(byte modbusSlaveID, Stream& stream, int8_t enablePin = -1);
     /**@}*/
-
+    
+    /**
+     * @brief Configurate the identifier of the modbus slave device
+     * @param modbusSlaveID The byte identifier of the modbus slave device
+     * @return True if the starting communication was successful, false if not.
+     */
+    bool setModbusSlaveID(byte modbusSlaveID);
 
     // ===================================================================== //
     /**

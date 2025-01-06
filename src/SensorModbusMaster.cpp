@@ -44,6 +44,11 @@ bool modbusMaster::begin(byte modbusSlaveID, Stream& stream, int8_t enablePin) {
     return begin(modbusSlaveID, &stream, enablePin);
 }
 
+bool modbusMaster::setModbusSlaveID(byte modbusSlaveID){
+    _slaveID   = modbusSlaveID;
+
+    return true;
+}
 
 // These functions return a variety of data from a data register
 uint16_t modbusMaster::uint16FromRegister(byte regType, int regNum, endianness endian) {
